@@ -1,26 +1,62 @@
-import { Button, Container, Typography } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  Grid,
+  TextField,
+  Button,
+  Paper,
+} from "@mui/material";
 
 function App() {
   return (
-    <Container maxwidth="sm" sx={{ mt: 4 }}>
-      <Typography variant="h4" gutterBottom>
-        MUI Learning – Day 1
-      </Typography>
-
-      <Typography variant="body1" sx={{ mb: 2 }}>
-        This is my first MUI app.
-      </Typography>
-
-      <Button variant="contained" color="secondary">
-        Click Me
-      </Button>
-
-      <Typography
-        variant="h1"
-        sx={{ fontSize: { xs: "2rem", sm: "3rem", md: "4rem" }, mt: 4 }}
+    <Container maxWidth="sm">
+      <Box
+        sx={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
-        Responsive Title
-      </Typography>
+        <Paper
+          elevation={4}
+          sx={{
+            p: 3,
+            width: "100%",
+            borderRadius: 2,
+          }}
+        >
+          <Typography
+            variant="h5"
+            textAlign="center"
+            fontWeight={600}
+            gutterBottom
+          >
+            Interest Calculator
+          </Typography>
+
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField fullWidth label="Principal Amount" type="number" />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField fullWidth label="Rate (%)" type="number" />
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <TextField fullWidth label="Time (Years)" type="number" />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Button fullWidth size="large" variant="contained">
+                Calculate
+              </Button>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Box>
     </Container>
   );
 }
