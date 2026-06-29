@@ -51,7 +51,7 @@ function App() {
 
             <Grid item xs={12}>
               <Button fullWidth size="large" variant="contained">
-                Calculate
+                Calculate It
               </Button>
             </Grid>
           </Grid>
