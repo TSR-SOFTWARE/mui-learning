@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "https://mui-learning.onrender.com/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://mui-learning.onrender.com";
 
 export async function calculate(principal, rate, time) {
     const params = new URLSearchParams({ principal, rate, time });
