@@ -12,6 +12,7 @@ on:
       - "package-lock.json"
       - "vite.config.js"
       - "eslint.config.js"
+      - ".github/workflows/deploy.yml"
 
 jobs:
   deploy:
