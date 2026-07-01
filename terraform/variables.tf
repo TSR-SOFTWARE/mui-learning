@@ -7,5 +7,5 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "text211"
+  description = "Existing AWS Key Pair"
 }
