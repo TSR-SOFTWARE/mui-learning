@@ -5,6 +5,10 @@ const app = express();
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully!");
+});
+
 app.get("/api/calculate", (req, res) => {
     const { principal, rate, time } = req.query;
 
